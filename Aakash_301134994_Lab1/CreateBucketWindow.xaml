@@ -1,0 +1,23 @@
+﻿<Window x:Class="Aakash_301134994_Lab1.CreateBucketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aakash_301134994_Lab1"
+        mc:Ignorable="d"
+        Title="Create Bucket" Height="450" Width="800">
+    <Grid>
+        <Label Content="Bucket Name" HorizontalAlignment="Left" Margin="85,69,0,0" VerticalAlignment="Top" Width="90"/>
+        <TextBox x:Name="txtBucketName" HorizontalAlignment="Left" Margin="190,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="20"/>
+        <Button x:Name="btnCreateBucket" Content="Create Bucket"  Foreground="Yellow" Background="#FF6E6EF5" HorizontalAlignment="Left" Margin="600,70,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.053,0.752" Click="btnCreateBucket_Click"/>
+        <Label Content="Bucket name must not contain uppercase characters and white spaces" FontStyle="Italic" Foreground="Blue" FontSize="11px" HorizontalAlignment="Left" Margin="190,104,0,0" VerticalAlignment="Top" Width="350" Height="25"/>
+        <DataGrid x:Name="dgBucketList" AutoGenerateColumns="False" Margin="35,154,25,120" Background="LightGray" RowBackground="LightYellow" AlternatingRowBackground="LightBlue" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bucket Name" Width="400"  Binding="{Binding BucketName}"/>
+                <DataGridTextColumn Header="Creation Date" Width="310"  Binding="{Binding CreationDate}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="btnMainWindow" Content="Back to Main Window" Foreground="Yellow" Background="#FF6E6EF5" HorizontalAlignment="Left" Margin="260,365,0,0" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.48,-4.008" Click="btnMainWindow_Click"/>
+
+    </Grid>
+</Window>
